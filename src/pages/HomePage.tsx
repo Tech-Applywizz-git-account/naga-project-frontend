@@ -226,15 +226,15 @@ const HomePage: React.FC = () => {
 
   // 🔁 REPLACED: Logos → Images
   const galleryImages = [
-    "/public/LOGO_AQUENT_images-removebg-preview.png",
-    "/public/_Covetrus_Logo_rgb-TM_2020 1.png",
-    "/public/DIGITAL OCEAN.png",
-    "/public/ford-logo-02.png",
-    "/public/LOGO_AQUENT_images-removebg-preview.png",
-    "/public/onedigital-logo-vector.png",
-    "/public/SIGNIFY-removebg-preview.png",
-    "/public/VIRTUSA-removebg-preview.png",
-    "/public/YAHOO-removebg-preview.png",
+    " /LOGO_AQUENT_images-removebg-preview.png",
+    " /_Covetrus_Logo_rgb-TM_2020 1.png",
+    " /DIGITAL OCEAN.png",
+    " /ford-logo-02.png",
+    " /LOGO_AQUENT_images-removebg-preview.png",
+    " /onedigital-logo-vector.png",
+    " /SIGNIFY-removebg-preview.png",
+    " /VIRTUSA-removebg-preview.png",
+    " /YAHOO-removebg-preview.png",
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -452,7 +452,7 @@ const HomePage: React.FC = () => {
             >
               <div className="relative">
                 <img
-                  src="/public/image_for_project naga.avif"
+                  src=" /image_for_project naga.avif"
                   alt="Professional using laptop"
                   className="w-full h-full object-cover "
                 />
@@ -499,25 +499,25 @@ const HomePage: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {[
               {
-                iconSrc: "/public/document-verification.svg",
+                iconSrc: "/document-verification.svg",
                 title: "Verified companies",
                 desc: "Access trusted US employers offering H1B visa sponsorships today.",
                 bgColor: "bg-purple-50",
               },
               {
-                iconSrc: "/public/One-time-payment.svg",
+                iconSrc: "/One-time-payment.svg",
                 title: "One-time payment",
                 desc: "Simple lifetime access. Pay once and unlock career opportunities forever.",
                 bgColor: "bg-blue-50",
               },
               {
-                iconSrc: "/public/career_links.svg",
+                iconSrc: "/career_links.svg",
                 title: "Direct career links",
                 desc: "Apply smarter using official portals without wasting time searching online.",
                 bgColor: "bg-purple-50",
               },
               {
-                iconSrc: "/public/update.svg",
+                iconSrc: "/update.svg",
                 title: "Regular updates",
                 desc: "Freshly reviewed companies added weekly for the most reliable guidance.",
                 bgColor: "bg-blue-50",
@@ -653,19 +653,19 @@ const HomePage: React.FC = () => {
                   title: "Sign up free",
                   desc: "Create your account quickly using email or social login to access the portal.",
                   bgColor: "bg-blue-50",
-                  image: "/public/add-user.svg",
+                  image: " /add-user.svg",
                 },
                 {
                   title: "Make one-time payment",
                   desc: "Unlock lifetime access by paying just $3.99 — no hidden fees, no subscriptions.",
                   bgColor: "bg-purple-50",
-                  image: "/public/wallet (1).svg",
+                  image: " /wallet (1).svg",
                 },
                 {
                   title: "Explore company list",
                   desc: "Instantly browse verified H1B sponsoring companies with names, domains, and career page links.",
                   bgColor: "bg-blue-50",
-                  image: "/public/document-verification.svg",
+                  image: " /document-verification.svg",
                 },
               ].map((card, idx) => (
                 <motion.div
@@ -908,3 +908,4 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+
