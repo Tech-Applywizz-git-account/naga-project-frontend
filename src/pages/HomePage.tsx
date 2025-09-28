@@ -7,6 +7,7 @@ import {
   X,
   ChevronLeft,
   ChevronRight,
+  MessageCircle,
   LogIn,
   Eye,
   EyeOff,
@@ -339,6 +340,7 @@ const HomePage: React.FC = () => {
                 <button onClick={() => scrollToSection("process")} className="text-gray-600 hover:text-black transition-colors">How it works</button>
                 <button onClick={() => scrollToSection("pricing")} className="text-gray-600 hover:text-black transition-colors">Pricing</button>
                 <button onClick={() => scrollToSection("testimonial")} className="text-gray-600 hover:text-black transition-colors">Testimonial</button>
+                <button onClick={() => scrollToSection("contact")} className="text-gray-600 hover:text-black transition-colors">Contact</button>
               </motion.nav>
 
               {/* Desktop CTA */}
@@ -383,6 +385,7 @@ const HomePage: React.FC = () => {
                   <button onClick={() => scrollToSection("process")} className="w-full text-left py-2 text-gray-700 hover:text-black">How it works</button>
                   <button onClick={() => scrollToSection("pricing")} className="w-full text-left py-2 text-gray-700 hover:text-black">Pricing</button>
                   <button onClick={() => scrollToSection("testimonial")} className="w-full text-left py-2 text-gray-700 hover:text-black">Testimonial</button>
+                  <button onClick={() => scrollToSection("contact")} className="w-full text-left py-2 text-gray-700 hover:text-black">Contact</button>
                   <button onClick={handleLoginClick} className="w-full text-left py-2 text-gray-700 hover:text-black">Login</button>
                 </nav>
               </motion.div>
@@ -901,6 +904,33 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      {/* ========== 6) CONTACT ========== */}
+      <section id="contact" className="py-20 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6">
+          <motion.div
+            variants={slideUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            className="max-w-3xl mx-auto text-center space-y-6"
+          >
+            <p className="text-sm font-bold tracking-wider uppercase text-purple-700">Contact</p>
+            <h2 className="text-4xl font-bold text-gray-900">Chat with our WhatsApp support</h2>
+            <p className="text-base text-gray-600">Need help getting started? Reach our team directly on WhatsApp and we'll respond quickly.</p>
+            <div>
+              <a
+                href="https://wa.me/917997719874"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 rounded-full bg-green-600 px-8 py-3 font-semibold text-white shadow-lg transition-colors hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300"
+              >
+                <MessageCircle className="h-5 w-5" />
+                WhatsApp +91 79977 19874
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
