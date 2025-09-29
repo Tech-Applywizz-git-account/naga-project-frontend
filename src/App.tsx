@@ -2,7 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ProductPage from './pages/ProductPage';
-import SignupPage from './pages/SignupPage';   // <-- import your SignupPage
+import SignupPage from './pages/SignupPage';
+import PaymentPage from './pages/PaymentPage';
+import PaymentFirstPage from './pages/PaymentFirstPage';
+import EmailVerificationPage from './pages/EmailVerificationPage';
+import Dashboard from './pages/Dashboard';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppButton: React.FC = () => (
@@ -23,7 +27,11 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product" element={<ProductPage />} />
-        <Route path="/signup" element={<SignupPage />} />   {/* <-- add this */}
+        <Route path="/payment" element={<PaymentFirstPage />} />
+        <Route path="/verify-email" element={<EmailVerificationPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/payment-after-signup" element={<PaymentPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <WhatsAppButton />
     </Router>

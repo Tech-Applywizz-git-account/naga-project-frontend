@@ -252,10 +252,10 @@ const HomePage: React.FC = () => {
     scrollToSection("pricing");
   };
 
-  // NEW: Buy Now → go to signup page
+  // NEW: Buy Now → go to payment page directly
   const handleBuyNow = () => {
     setMobileOpen(false);
-    if (navigate) navigate("/signup");
+    if (navigate) navigate("/payment");
   };
 
   const handleLoginClick = () => {
@@ -324,7 +324,7 @@ const HomePage: React.FC = () => {
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                   <Crown className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl font-bold text-black">Monks Pay</span>
+                <span className="text-xl font-bold text-black">Skill Passport</span>
               </motion.div>
 
               {/* Desktop Navigation */}

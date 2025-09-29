@@ -328,10 +328,46 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
         return;
       }
 
-      // Navigate to the dashboard after successful login
-      navigate("/");
-    } catch (err) {
-      setError("Invalid credentials. Please try again.");
+      // ELON'S STRICT VERIFICATION: Use the new secure login function
+      const { data: loginAuth, error: loginError } = await supabase
+        .rpc('can_user_login', { user_email: email });
+
+      if (loginError) {
+        console.error('Login verification error:', loginError);
+        setError('Login verification failed. Please try again.');
+        return;
+      }
+
+      const loginResult = loginAuth?.[0];
+      
+      if (!loginResult?.can_login) {
+        const reason = loginResult?.reason || 'Access denied';
+        if (reason.includes('payment')) {
+          setError('Payment required. Please complete payment first.');
+          // Redirect to payment page
+          setTimeout(() => {
+            navigate('/payment');
+            onClose();
+          }, 2000);
+        } else if (reason.includes('email')) {
+          setError('Email verification failed. PayPal email must match login email.');
+        } else {
+          setError(`Access denied: ${reason}`);
+        }
+        return;
+      }
+
+      // SUCCESS: User is verified and can login
+      navigate("/dashboard");
+      onClose();
+    } catch (err: any) {
+      if (err.message.includes('Invalid login credentials')) {
+        setError('Invalid email or password. Please check your credentials.');
+      } else if (err.message.includes('Email not confirmed')) {
+        setError('Please confirm your email before logging in.');
+      } else {
+        setError('Login failed. Please try again.');
+      }
     } finally {
       setLoading(false);
     }

@@ -4,5 +4,11 @@
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
   ],
-  
+  "exclude": [
+    "supabase/**/*",
+    "**/supabase/**/*",
+    "**/*.deno.ts",
+    "**/deno.json",
+    "**/import_map.json"
+  ]
 }

@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["deno.window", "deno.ns", "deno.unstable"],
+    "types": ["./deno.d.ts"],
+    "strict": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "checkJs": false,
+    "experimentalDecorators": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitUseStrict": true,
+    "target": "ES2022",
+    "moduleDetection": "force"
+  },
+  "importMap": "./import_map.json",
+  "exclude": [
+    "node_modules",
+    "../node_modules",
+    "../../node_modules"
+  ],
+  "tasks": {
+    "dev": "deno run --allow-net --allow-read --allow-env --watch index.ts"
+  }
+}
