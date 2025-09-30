@@ -660,7 +660,7 @@ const HomePage: React.FC = () => {
                 },
                 {
                   title: "Make one-time payment",
-                  desc: "Unlock lifetime access by paying just $3.99 — no hidden fees, no subscriptions.",
+                  desc: "Unlock lifetime access by paying just $14.99 — no hidden fees, no subscriptions.",
                   bgColor: "bg-purple-50",
                   image: " /wallet (1).svg",
                 },
@@ -745,7 +745,7 @@ const HomePage: React.FC = () => {
               <div className="relative">
                 <h3 className="text-xl font-semibold mb-4 text-gray-300">Lifetime Access</h3>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold">$3.99</span>
+                  <span className="text-4xl font-bold">$14.99</span>
                   <span className="text-gray-400 ml-2">/lifetime</span>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -938,4 +938,5 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+
 
